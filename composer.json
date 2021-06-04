@@ -1,0 +1,47 @@
+{
+    "name": "ecom/combinations",
+    "description": "A simple ecom combinations composer package",
+    "type": "library",
+    "license": "MIT",
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "authors": [
+        {
+            "name": "adityaworld",
+            "email": "adityaleosaha@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    }, "autoload": {
+        "psr-4": {
+            "Spcom404\\Combinations\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Spcom404\\Combinations\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Spcom404\\Combinations\\CombinationsServiceProvider"
+            ],
+            "aliases": {
+                "Combinations": "Spcom404\\Combinations\\CombinationsFacade"
+            }
+        }
+    }
+}
